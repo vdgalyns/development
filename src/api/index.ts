@@ -8,6 +8,6 @@ export default {
                     return response.json() as Promise<Project[]>
                 }
                 return Promise.reject(`Ошибка ${response.status}`)
-            }).catch((error) => error)
+            })
     }
 }
