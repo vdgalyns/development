@@ -23,10 +23,7 @@ export default function Project({ project }: Props) {
                 {project.description}
             </p>
             <div className={styles.stack}>
-                Стек:
-                <div className={styles.stackList}>
-                    {project.stack.map((stack, index) => <Badge key={index} text={stack} />)}
-                </div>
+                {project.stack.map((stack, index) => <Badge key={index} text={stack} />)}
             </div>
             <p className={styles.publishedAt}>
                 Опубликовано: {publishedAt}
