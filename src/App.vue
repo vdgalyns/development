@@ -25,7 +25,7 @@ const fetchProjects = () => {
       .then((data) => {
         projects.value = data.projects
       }).catch((e) => {
-        console.log(e)
+        console.error(e)
       })
 }
 onMounted(() => {
