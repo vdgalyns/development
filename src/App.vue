@@ -15,22 +15,7 @@
 <script setup lang="ts">
 import Header from './components/Header.vue'
 import Project from './components/Project.vue'
-import { onMounted, ref } from 'vue'
-import type { Project as ProjectType } from './types/project.ts'
-import api from './api'
-
-const projects = ref<ProjectType[]>([])
-const fetchProjects = () => {
-  return api.fetchProjects()
-      .then((data) => {
-        projects.value = data.projects
-      }).catch((e) => {
-        console.error(e)
-      })
-}
-onMounted(() => {
-  fetchProjects()
-})
+import projects from './static/projects.json'
 </script>
 
 <style module="classes">
