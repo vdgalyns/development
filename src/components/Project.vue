@@ -8,8 +8,8 @@
     </p>
     <div :class="classes.stack">
       <Badge
-          v-for="(stack, index) in project.stack"
-          :key="index"
+          v-for="stack in project.stack"
+          :key="stack"
           :text="stack"
       />
     </div>
